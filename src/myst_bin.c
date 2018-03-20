@@ -3,6 +3,11 @@
 #include "memory.h"
 #include "wtextrange.h"
 
+#ifndef WIN32
+#include <stdint.h>
+typedef int64_t __int64;
+#endif
+
 const char bin_magic[] = "ubi/b0-l";
 
 enum BinType
