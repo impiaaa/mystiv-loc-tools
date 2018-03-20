@@ -9,29 +9,29 @@
 
 #include "wtextrange.h"
 
-const unsigned short xml_hdr[] = L"<?xml version=\"1.0\"?>\r\n";
+const unsigned short xml_hdr[] = u"<?xml version=\"1.0\"?>\r\n";
 
-const unsigned short trans_pre[] = L"<trans name=\"";
-const unsigned short trans_post[] = L"\">";
-const unsigned short trans_end[] = L"</trans>\r\n";
+const unsigned short trans_pre[] = u"<trans name=\"";
+const unsigned short trans_post[] = u"\">";
+const unsigned short trans_end[] = u"</trans>\r\n";
 
-const unsigned short node_open[] = L"<";
-const unsigned short node_closing[] = L"</";
-const unsigned short node_close[] = L">\r\n";
+const unsigned short node_open[] = u"<";
+const unsigned short node_closing[] = u"</";
+const unsigned short node_close[] = u">\r\n";
 
-const unsigned short group_open[] = L"<group>\r\n";
-const unsigned short group_open_pre[] = L"<group name=\"";
-const unsigned short group_open_post[] = L"\">\r\n";
-const unsigned short group_close[] = L"</group>\r\n";
+const unsigned short group_open[] = u"<group>\r\n";
+const unsigned short group_open_pre[] = u"<group name=\"";
+const unsigned short group_open_post[] = u"\">\r\n";
+const unsigned short group_close[] = u"</group>\r\n";
 
-const unsigned short subtitle_open_pre[] = L"<subtitle name=\"";
-const unsigned short subtitle_open_post[] = L"\">\r\n";
-const unsigned short subtitle_close[] = L"</subtitle>\r\n";
+const unsigned short subtitle_open_pre[] = u"<subtitle name=\"";
+const unsigned short subtitle_open_post[] = u"\">\r\n";
+const unsigned short subtitle_close[] = u"</subtitle>\r\n";
 
-const unsigned short line_open_on[] = L"<line on=\"";
-const unsigned short line_open_off[] = L"\" off=\"";
-const unsigned short line_open_post[] = L"\">";
-const unsigned short line_close[] = L"</line>\r\n";
+const unsigned short line_open_on[] = u"<line on=\"";
+const unsigned short line_open_off[] = u"\" off=\"";
+const unsigned short line_open_post[] = u"\">";
+const unsigned short line_close[] = u"</line>\r\n";
 
 #define WRITE(stream, xml) stream_write(stream, xml, sizeof(xml) -2);
 
@@ -396,10 +396,10 @@ Locale* loc_from_xml(WRange* src)
 
         int loop;
 
-        group_range = wrange_from_string(L"group");
-        trans_range = wrange_from_string(L"trans");
-        subtitle_range = wrange_from_string(L"subtitle");
-        line_range = wrange_from_string(L"line");
+        group_range = wrange_from_string(u"group");
+        trans_range = wrange_from_string(u"trans");
+        subtitle_range = wrange_from_string(u"subtitle");
+        line_range = wrange_from_string(u"line");
 
         wrange_create(&ele_name);
         wrange_create(&ele_attr_val[0]);

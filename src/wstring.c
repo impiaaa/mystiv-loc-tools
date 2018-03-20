@@ -25,7 +25,7 @@ const short *wstring_get(WString* wstr)
     return wstr->val;
   }
 
-  return L"";
+  return u"";
 }
 
 int cwstring_length(const short* cwstr)
